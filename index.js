@@ -1,43 +1,33 @@
-//Code your solutions in this file
-// for (let age = 30; age < 40; age++) {
-//   console.log(`I'm ${age} years old. Happy birthday to me!`);
-//   debugger;
-// }
 
-// const gifts = ["teddy bear", "drone", "doll"];
-
-// function wrapGifts(gifts) {
-//   for (let i = 0; i < gifts.length; i++) {
-//     console.log(`Wrapped ${gifts[i]} and added a bow!`);
-//     debugger;
-//   }
-
-//   return gifts;
-// }
-
-// wrapGifts(gifts);
-
-//// ----------------------------------------------
-
+// This function takes an array of names and an event name, and returns an array of custom thank you messages.
 function writeCards(names, event) {
-  let messagesArray = [];
+  let messagesArray = []; // An array to store the messages.
   for (let i = 0; i < names.length; i++) {
-    let message = `Thank you, ${names[i]}, for the wonderful ${event} gift!`;
-    messagesArray.push(message);
+    // For each name in the names array,
+    let message = `Thank you, ${names[i]}, for the wonderful ${event} gift!`; // create a custom message.
+    messagesArray.push(message); // Add the custom message to the messagesArray.
   }
-  return messagesArray;
+  return messagesArray; // Return the array of messages after the loop finishes.
 }
 
-//calling the function
-let thankYouMessages = writeCards(["Charlie", "Samip", "Ali"], "birthday");
-console.log(thankYouMessages); // logs the array of thank you messages
+// Example usage of the function:
+console.log(writeCards(["Charlie", "Samip", "Ali"], "birthday"));
+// Expected output:
+// [
+//   "Thank you, Charlie, for the wonderful birthday gift!",
+//   "Thank you, Samip, for the wonderful birthday gift!",
+//   "Thank you, Ali, for the wonderful birthday gift!",
+// ];
 
-// function countDown(n)
+// This function takes a positive integer n and counts down to zero, logging each number.
 function countDown(n) {
-  while (n >= 0) {
-    console.log(n);
-    n--;
+  while (n >= 0) { // While n is greater than or equal to 0,
+    console.log(n); // log the current value of n.
+    n--; // Decrement n.
   }
 }
-//calling the function
+
+// Example usage of the function:
 countDown(10);
+// Expected logs:
+// 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
